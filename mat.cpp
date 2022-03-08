@@ -5,7 +5,10 @@
 #include <algorithm>
 
 using namespace std;
-
+/**
+* This function gets number of columns, number of rows, and two chars.
+* The function returns a string that will represent the mattress producted using the inputs.
+*/
 string ariel::mat(int columns, int rows, char ch1, char ch2) {
 	// mat size need to be odd
 	if (rows % 2 == 0 || columns % 2 == 0) {
