@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace ariel;
 
-
+// This test will check basic good inputs.
 TEST_CASE("Good: small input") {
 	CHECK(mat(1, 1, '1', '#') == "1");
 
@@ -47,7 +47,7 @@ TEST_CASE("Good: small input") {
 								  "444444444");
 }
 	
-
+// This test will check large good inputs.
 TEST_CASE("Good: large input") {
 
 	CHECK(mat(23, 17, '#', '$') == "#######################\n"
@@ -161,7 +161,7 @@ TEST_CASE("Good: large input") {
 								   "#####################################################");
 }
 
-
+// This test will check if an error occurs when there's an even number in the columns / rows.
 TEST_CASE("Bad: even  input") {
 	CHECK_THROWS(mat(10, 5, '$', '%'));
 
@@ -180,7 +180,7 @@ TEST_CASE("Bad: even  input") {
 	CHECK_THROWS(mat(0, 0, '@', '-'));
 }
 
-
+// This test will check if an error occurs when there's a negative number in the columns / rows.
 TEST_CASE("Bad: negative  input") {
 	CHECK_THROWS(mat(-5, 0, '@', '-'));
 
@@ -193,6 +193,7 @@ TEST_CASE("Bad: negative  input") {
 	CHECK_THROWS(mat(-2, 7, '@', '-'));
 }
 
+// This test will check if an error occurs when there's an invalid character in the first / second char input.
 TEST_CASE("Bad: invalid characters") {
 	CHECK_THROWS(mat(5, 1, ' ', ' '));
 
